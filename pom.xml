@@ -66,7 +66,6 @@
             <!--Центробанковский WSDL, из которого тоже не генерятся классы-->
             <!--https://www.cbr.ru/CreditInfoWebServ/CreditOrgInfo.asmx?WSDL-->
 
-            <!--!!!!!!JAXB!!!!!!!!!-->
             <plugin>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb2-plugin</artifactId>
@@ -83,34 +82,12 @@
                     <forceRegenerate>true</forceRegenerate>
                     <schemas>
                         <schema>
-                            <url>http://wsf.cdyne.com/WeatherWS/Weather.asmx?WSDL</url>
+                            <url>https://ws.cdyne.com/creditcardverify/luhnchecker.asmx?wsdl</url>
                         </schema>
                     </schemas>
                 </configuration>
             </plugin>
 
-
-            <!--!!!!!wsimport!!!!!!!-->
-            <!--<plugin>-->
-                <!--<groupId>org.codehaus.mojo</groupId>-->
-                <!--<artifactId>jaxws-maven-plugin</artifactId>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<goals>-->
-                            <!--<goal>wsimport</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-                <!--<configuration>-->
-                    <!--&lt;!&ndash; Online WSDL data &ndash;&gt;-->
-                    <!--<wsdlUrls>-->
-                      <!--<wsdlUrl>https://www.cbr.ru/CreditInfoWebServ/CreditOrgInfo.asmx?WSDL</wsdlUrl>-->
-                    <!--</wsdlUrls>-->
-                    <!--&lt;!&ndash; Каталог в проекте, куда можно свалить все wsdl-ки &ndash;&gt;-->
-                    <!--&lt;!&ndash;<wsdlDirectory>src/main/resources/wsdl</wsdlDirectory>&ndash;&gt;-->
-                    <!--<packageName>wsdl</packageName>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
 
         </plugins>
     </build>
