@@ -11,7 +11,7 @@ public class Application {
 
         CardChecker checker = ctx.getBean(CardChecker.class);
 
-        CheckCCResponse response = checker.add("231");
+        CheckCCResponse response = checker.add("4111111111111111");
         checker.printResponse(response);
     }
 
